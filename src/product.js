@@ -1,9 +1,13 @@
 function Product() {
   return (
-    <div>
       <h1> Product</h1>
-    </div>
   );
+}
+
+export function Navbar(){  //alter export with secund component
+    return <nav>
+        navigation
+    </nav>
 }
 
 // other form export component
