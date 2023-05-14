@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Greeting, CreateObj, PropsExample, Client } from "./example"; // export N component, that have many component
-import Product, { Navbar } from "./product"; //export whole component, that have only one component (Navbar is change export for default)
+import { Greeting, CreateObj, PropsExample, Client } from "./Example"; // export N component, that have many component
+import Product, { Navbar } from "./Product"; //export whole component, that have only one component (Navbar is change export for default)
 import { Button } from "./Button";
+import { Task } from "./Tasks.js";
+import { Post } from "./Post";
+
+//this is the form most dificult maintenance in the time and is old
+import { OtherformComponent } from "./OtheformComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -42,6 +47,26 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //       );
 //   }
 
+const handleChange = (e) => {
+  console.log(e.target.value);
+};
+
+//used for map is iteration with array
+const people = [
+  {
+    id: 1,
+    firstName: "Kenny",
+    lastname: "Mora",
+    image: "https://robohash.org/1",
+  },
+  {
+    id: 2,
+    firstName: "Robert",
+    lastname: "Parra",
+    image: "https://robohash.org/2",
+  },
+];
+
 //send components to index.html (div id=root)
 root.render(
   <>
@@ -56,7 +81,7 @@ root.render(
 
     {/* <PropsExample title="hi" name="kenny" />
     <PropsExample title="Props" /> */}
-    
+
     {/* below example props */}
     {/* <PropsExample y={30} />
     <PropsExample z={true} />
@@ -71,9 +96,37 @@ root.render(
     greet={ function () { alert('Add functions to props') }}
     /> */}
 
-    <Button title="Click me" />    
+    {/* <Button title="Click me" />    
     <Button title="Save" />    
-    <Button title={3000} />    
+    <Button title={3000} />     */}
 
+    {/* <Task ready = {false} />
+
+    <OtherformComponent/>
+
+    <Button title="Click me" />
+    
+    <input onChange={ function (e) {
+        // console.log("write")
+        console.log(e.target.value)
+    }}/>
+
+    <input onChange={ (e) => {
+        console.log(e.target.value)
+    }}/> */}
+
+    {/* <input onChange={ handleChange}/>
+
+    <Post/> */}
+
+    {people.map((person, i) => {
+      //react need i in key for inner workings
+      return (
+        <div key={i}>
+          <h1>{person.firstName}</h1>;
+          <img src= {person.image} />
+        </div>
+      );
+    })}
   </>
 );

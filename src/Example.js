@@ -21,8 +21,10 @@ export function Greeting() {
 export function CreateObj() {
   //all component need create with function syntax the first character in Uppercase
   const user = {
+    id: 1,
     firstName: "Kenny",
     lastname: "Mora",
+    image: 'https://robohash.org/1',
   };
 
   // return <h1> {JSON.stringify(user)} </h1>
