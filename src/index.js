@@ -75,6 +75,7 @@ root.render(
     {/* <Greeting></Greeting> */}
     {/* and then */}
 
+    {/*principal forma de llamar un componente */}
     {/* <Greeting />
     <CreateObj /> */}
     {/* <Product /> */}
@@ -82,11 +83,13 @@ root.render(
     {/* <PropsExample title="hi" name="kenny" />
     <PropsExample title="Props" /> */}
 
+    {/* diference tipes props */}
     {/* below example props */}
     {/* <PropsExample y={30} />
     <PropsExample z={true} />
     <PropsExample arr={[1,2,3]} /> */}
 
+  {/* send props and funtions in component */}
     {/* <Client 
     name="Kenny Robert"
     amount={3000}
@@ -96,10 +99,12 @@ root.render(
     greet={ function () { alert('Add functions to props') }}
     /> */}
 
+  {/* send props in buttons (component inside is button, name component is Button not is that same) */}
     {/* <Button title="Click me" />    
     <Button title="Save" />    
     <Button title={3000} />     */}
 
+    {/* change css with a props */}
     {/* <Task ready = {false} />
 
     <OtherformComponent/>
@@ -119,7 +124,8 @@ root.render(
 
     <Post/> */}
 
-    {people.map((person, i) => {
+    {/* map => is array with super power */}
+    {/* {people.map((person, i) => {
       //react need i in key for inner workings
       return (
         <div key={i}>
@@ -127,6 +133,8 @@ root.render(
           <img src= {person.image} />
         </div>
       );
-    })}
+    })} */}
+
+
   </>
 );
