@@ -5,6 +5,9 @@ import Product, { Navbar } from "./Product"; //export whole component, that have
 import { Button } from "./Button";
 import { Task } from "./Tasks.js";
 import { Post } from "./Post";
+import { Counter } from "./Counter";
+import { Form } from "./Form";
+import { InputUseEffect } from "./InputUseEffect"; 
 
 //this is the form most dificult maintenance in the time and is old
 import { OtherformComponent } from "./OtheformComponent";
@@ -70,12 +73,13 @@ const people = [
 //send components to index.html (div id=root)
 root.render(
   <>
+    {/*way to call a component */}
     {/* { Greeting() } */}
     {/* is the same this */}
     {/* <Greeting></Greeting> */}
     {/* and then */}
 
-    {/*principal forma de llamar un componente */}
+    {/*main way to call a component */}
     {/* <Greeting />
     <CreateObj /> */}
     {/* <Product /> */}
@@ -83,13 +87,13 @@ root.render(
     {/* <PropsExample title="hi" name="kenny" />
     <PropsExample title="Props" /> */}
 
-    {/* diference tipes props */}
+    {/* diference types props */}
     {/* below example props */}
     {/* <PropsExample y={30} />
     <PropsExample z={true} />
     <PropsExample arr={[1,2,3]} /> */}
 
-  {/* send props and funtions in component */}
+  {/* send props and functions in component */}
     {/* <Client 
     name="Kenny Robert"
     amount={3000}
@@ -135,6 +139,14 @@ root.render(
       );
     })} */}
 
+    {/* Built-in React Hooks (only useState) */}
+    {/* <Counter/> */}
+
+    {/* useState in input  */}
+    {/* <Form/> */}
+
+    <InputUseEffect/>
+    
 
   </>
 );
